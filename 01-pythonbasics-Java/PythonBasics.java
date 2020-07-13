@@ -5,9 +5,13 @@
 // You can only have the string once in your code.
 // Don't just copy/paste it 5 times into a single variable!
 
-
 public class PythonBasics {
     public String show_excitement() {
-    	// your code goes here
+		// your code goes here
+		String str = "I am super excited for this course!";
+		for(int i = 0; i <= 4; i++){
+			str = str + " ";
+		}
+		return str;
 	}
 }

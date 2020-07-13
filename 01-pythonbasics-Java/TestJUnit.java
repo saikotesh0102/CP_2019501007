@@ -17,5 +17,4 @@ public class TestJUnit {
    public void testCase1() {
       assertEquals(new PythonBasics().show_excitement(), "I am super excited for this course! I am super excited for this course! I am super excited for this course! I am super excited for this course! I am super excited for this course! ");
    }
-
 }
