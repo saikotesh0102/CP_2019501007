@@ -5,6 +5,14 @@
 
 class eggcartons {
 	public int fun_eggcartons(int eggs){
-		return 0;
+		if(eggs > 0){
+			if(eggs % 12 == 0){
+				return eggs / 12;
+			}else{
+				return (eggs / 12) + 1;
+			}
+		}else{
+			return 0;
+		}
 	}
 }
