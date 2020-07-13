@@ -11,9 +11,23 @@
 // Hint: You can use max(a,b,c) to find the largest of 3 values, and
 // min(a,b,c) to find the smallest.
 
+import java.util.*;
+import java.lang.*;
+
 public class DiceToOrderedHand {
 	public int diceToOrderedHand(int a, int b, int c) {
 		// your code goes here
-		return 0;
+		Integer[] arr = new Integer[3];
+		arr[0] = a; 
+		arr[1] = b; 
+		arr[2] = c;
+		Arrays.sort(arr, Collections.reverseOrder());
+		
+		StringBuilder num = new StringBuilder();
+		for (int i : arr) {
+			num.append(i);
+		}
+		int finalInt = Integer.parseInt(num.toString());
+		return finalInt;
 	}	
 }
