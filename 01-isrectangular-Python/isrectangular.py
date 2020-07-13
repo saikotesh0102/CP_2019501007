@@ -1,6 +1,7 @@
 # Write the function isrectangular(L) that takes a possibly-2d 
 # list L and returns True  if it is rectangular, so each row has
-#  the same number of elements. Return False otherwise.
+# the same number of elements. Return False otherwise.
+#Sai Koteswara Rao Ch
 
 def fun_isrectangular(l):
 	t = len(l[0])
@@ -8,6 +9,3 @@ def fun_isrectangular(l):
 		if len(i) != t:
 			return False
 	return True
-
-
-
