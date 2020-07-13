@@ -9,6 +9,7 @@ class isrectangular {
 			if( s != arr[i].length){
 				return false;
 			}
-		}return true;
+		}
+		return true;
 	}
 }
