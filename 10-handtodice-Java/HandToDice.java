@@ -8,6 +8,11 @@
 public class HandToDice {
 	public int[] handToDice(int hand) {
 		// your code goes here
-		return new int[0];
+		String temp = Integer.toString(hand);
+		int[] res = new int[temp.length()];
+		for(int i = 0; i < temp.length(); i++){
+			res[i] = temp.charAt(i) - '0';
+		}
+		return res;
 	}
 }
