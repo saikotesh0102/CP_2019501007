@@ -14,7 +14,6 @@ class get_kth_digit {
 		if(k > res.length() - 1){
 			return 0;
 		}else{
-			System.out.println(res.charAt(k));
 			return (int)res.charAt(k);
 		}
 	}
