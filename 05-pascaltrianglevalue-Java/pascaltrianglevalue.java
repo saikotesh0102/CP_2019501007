@@ -6,15 +6,28 @@
 // # are not legal values, return None, instead of crashing. 
 
 class pascaltrianglevalue {
+
+	public int factorial(int n){
+		int i = 0;
+		for(i = 1; i <=n; i++){
+			i = i * n;
+		}
+		return i;
+	}
+
+	public int combinations(int r, int c){
+		return factorial(r) / (factorial(r - c) * factorial(c));
+	}
+
 	public int fun_pascaltrianglevalue(int row, int col){
 		// your code goes here
-		if(row == 0 || row == col){
-			return 1;
+		int v = 0;
+		for(int i = 0; i <= row; i++){
+			for (int j = 0; j <= col; j++) {
+				v = combinations(i, j);
+			}
 		}
-		if(col > row || row < 0 || col < 0){
-			return 0;
-		}
-		return (fun_pascaltrianglevalue(row - 1, col) + fun_pascaltrianglevalue(row - 1, col - 1));
+		return v;
 	}
 	
 	public static void main(String[] args) {
