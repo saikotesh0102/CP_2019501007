@@ -10,22 +10,13 @@ import java.lang.*;
 public class IsRightTriangle {
 	public boolean isRightTriangle(int x1, int y1, int x2, int y2, int x3, int y3) {
 		// Your code goes here
-		int a = distance(x1, y1, x2, y2);
-		int b = distance(x2, y2, x3, y3);
-		int c = distance(x1, y1, x3, y3);
+		int a = ((x2 - x1) * (x2 - x1)) + ((y2 - y1) * (y2 - y1));
+		int b = ((x3 - x1) * (x3 - x1)) + ((y3 - y1) * (y3 - y1));
+		int c = ((x2 - x3) * (x2 - x3)) + ((y2 - y3) * (y2 - y3));
 		
-		if((Math.pow(a,2) + Math.pow(b,2)) == Math.pow(c,2)){
-			return true;
-		}else if((Math.pow(b,2) + Math.pow(c,2)) == Math.pow(a,2)){
-			return true;
-		}else if((Math.pow(a,2) + Math.pow(c,2)) == Math.pow(b,2)){
-			return true;
-		}else{
-			return false;
-		}
-	}
-
-	public int distance(int x1, int y1, int x2, int y2){
-		return (int)Math.sqrt(((x2 - x1) * (x2 - x1)) + ((y2 - y1) * (y2 - y1)));
+		if ((a == (b + c) && a != 0 && b != 0 && c != 0) ||  (b == (a + c) && a != 0 && b != 0 && c != 0) ||  (c == (a + b) && a != 0 && b != 0 && c != 0)) { 
+			return true; 
+		} 
+    	return false;
 	}
 }
