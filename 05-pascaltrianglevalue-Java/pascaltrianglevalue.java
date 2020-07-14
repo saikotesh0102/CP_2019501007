@@ -9,7 +9,7 @@ class pascaltrianglevalue {
 	public int fun_pascaltrianglevalue(int row, int col){
 		// your code goes here
 		if(row == 0 || row == col){
-			return 0;
+			return 1;
 		}
 		return (fun_pascaltrianglevalue(row - 1, col) + fun_pascaltrianglevalue(row - 1, col - 1)); 	
 	}
