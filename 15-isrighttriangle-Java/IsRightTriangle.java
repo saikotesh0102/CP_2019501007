@@ -5,9 +5,9 @@
 // distance(x1, y1, x2, y2), which you might call several times. Also, remember to use
 // almostEqual (instead of ==) when comparing floats.
 
+
 public class IsRightTriangle {
 	public boolean isRightTriangle(int x1, int y1, int x2, int y2, int x3, int y3) {
-		// Your code goes here
 		int a = ((x2 - x1) * (x2 - x1)) + ((y2 - y1) * (y2 - y1));
 		int b = ((x3 - x1) * (x3 - x1)) + ((y3 - y1) * (y3 - y1));
 		int c = ((x2 - x3) * (x2 - x3)) + ((y2 - y3) * (y2 - y3));
@@ -19,5 +19,6 @@ public class IsRightTriangle {
 	}
 
 	public static void main(String[] args) {
+
 	}
 }
