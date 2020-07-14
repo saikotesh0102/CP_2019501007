@@ -24,6 +24,6 @@ public class TestJUnit {
    @Test
    public void testCase2() {
       assertEquals(43, triangleArea.triangleArea(10.0, 10.0, 10.0));
-      assertEquals(45, triangleArea.triangleArea(10.0, 10.5, 10.0));
+      assertEquals(44, triangleArea.triangleArea(10.0, 10.5, 10.0));
    }
 }

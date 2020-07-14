@@ -7,6 +7,7 @@
 public class TriangleArea {
 	public int triangleArea(double s1, double s2, double s3) {
 		// Your code goes here
-		return 216;
+		double p = (s1 + s2 + s3) / 2;
+		return (int)Math.sqrt(p * (p - s1) * (p - s2) * (p - s3));
 	}
 }
