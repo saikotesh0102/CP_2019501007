@@ -3,16 +3,18 @@
 //     y = m1*x + b1
 //     y = m2*x + b2
 // This function returns the x value of the point of intersection of the two lines. If the lines are parallel, or identical, the function should return 0.
+// Sai Koteswara Rao Ch
 
 public class LineIntersection {
 	public int lineIntersection(int m1, int b1, int m2, int b2) {
 		// Your code goes here
-		if(m1 == m2 && b1 == b2){
+		if(m1 % m2 == 0 || m2 % m1 == 0){
 			return 0;
-		}else if(m1 % m2 == 0 || m2 % m1 == 0){
-			return 0;
-		}else{
-			return 1;
 		}
+		return (-b2 + b1)/(-m1 + m2);
+	}
+
+	public static void main(String[] args) {
+		
 	}
 }
