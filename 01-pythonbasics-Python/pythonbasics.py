@@ -4,7 +4,7 @@
 # Return the string with "return".
 # You can only have the string once in your code.
 # Don't just copy/paste it 5 times into a single variable!
-# Sai Koteswara Rao Chinni
+# Sai Koteswara Rao Ch
 
 def show_excitement():
     return "I am super excited for this course! " * 5
