@@ -58,4 +58,8 @@ public class stacks{
 	public Element pop(){
 		return new Element(5);
 	}
+
+	public static void main(String[] args) {
+		
+	}
 }
