@@ -9,14 +9,18 @@ public class Queue{
 	}
 	
 	public void enqueue(int new_ele){
-
+		storage[rear++] = new_ele;
 	}
 
 	public int peek(){
-		return 0;
+		return storage[front];
 	}
 
 	public int dequeue(){
-		return 0;
+		return storage[front++];
+	}
+
+	public static void main(String[] args) {
+		
 	}
 }
