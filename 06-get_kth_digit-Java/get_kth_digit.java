@@ -8,11 +8,15 @@
 class get_kth_digit {
 	public int fun_get_kth_digit(int digit, int k){
 		// your code goes here
-		digit = Math.abs(digit);
-		for(int i = 1; i < k; i++){
-			digit = digit / 10;
+		StringBuilder res = new StringBuilder();
+		res.append(Integer.toString(Math.abs(digit)));
+		res.reverse();
+		if(k > res.length() - 1){
+			return 0;
+		}else{
+			System.out.println(res.charAt(k));
+			return (int)res.charAt(k);
 		}
-		return digit;
 	}
 
 	public static void main(String[] args) {
