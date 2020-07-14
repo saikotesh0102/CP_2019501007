@@ -52,7 +52,7 @@ public class stacks{
 	}
 
 	public void push(Element e){
-		 // "Push (add) a new element onto the top of the stack"
+		// "Push (add) a new element onto the top of the stack"
 	}
 
 	public Element pop(){
