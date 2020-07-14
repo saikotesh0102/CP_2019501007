@@ -11,11 +11,10 @@ class pascaltrianglevalue {
 		if(row == 0 || row == col){
 			return 1;
 		}
-		if(row > col || col > row){
+		if(col > row || row < 0 || col < 0){
 			return 0;
-		}else{
-			return (fun_pascaltrianglevalue(row - 1, col) + fun_pascaltrianglevalue(row - 1, col - 1));
 		}
+		return (fun_pascaltrianglevalue(row - 1, col) + fun_pascaltrianglevalue(row - 1, col - 1));
 	}
 	
 	public static void main(String[] args) {
