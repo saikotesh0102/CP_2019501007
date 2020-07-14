@@ -7,6 +7,10 @@
 public class IsEvenPositiveInt {
 	public boolean isEvenPositiveInt(int x) {
 		// Your code goes here
-		return false;
+		if(x > 0 && x % 2 == 0){
+			return true;
+		}else{
+			return false;
+		}
 	}
 }
