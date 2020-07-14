@@ -8,7 +8,14 @@
 class get_kth_digit {
 	public int fun_get_kth_digit(int digit, int k){
 		// your code goes here
+		digit = Math.abs(digit);
+		for(int i = 1; i < k; i++){
+			digit = digit / 10;
+		}
+		return digit;
+	}
+
+	public static void main(String[] args) {
 		
-		return 0;
 	}
 }
