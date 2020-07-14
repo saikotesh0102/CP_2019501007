@@ -9,7 +9,7 @@ class pascaltrianglevalue {
 
 	public int factorial(int n){
 		int i = 0;
-		for(i = 1; i <=n; i++){
+		for(i = 1; n > 1; n--){
 			i = i * n;
 		}
 		return i;
