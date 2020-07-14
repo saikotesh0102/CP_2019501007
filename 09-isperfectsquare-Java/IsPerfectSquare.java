@@ -6,12 +6,16 @@
 public class IsPerfectSquare {
 	public boolean isPerfectSquare(int n) {
 		// Your code goes here
-		for(int i = 0; i * i <= n; i++){
-			if((n % i == 0) && (n /i == i)){
-				return true;
+		if(n >= 0){
+			for(int i = 0; i <= n/2; i++){
+				if(i * i == n){
+					return true;
+				}
 			}
+			return false;
+		}else{
+			return false;
 		}
-		return false;
 	}
 
 	public static void main(String[] args) {
