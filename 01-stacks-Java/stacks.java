@@ -5,7 +5,6 @@
 // Think about this while you're implementing:
 // why is it easier to add an "insert_first"
 // function than just use "append"?"""
-// Sai Koteswara Rao Ch
 
 class Element{
 	int value;
