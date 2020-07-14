@@ -7,9 +7,9 @@ class nearestodd {
 	public int fun_nearestodd(double n){
 		// your code goes here
 		if((n / 2) % 2 == 0){
-			System.out.println(n / 2);
 			return (int)Math.round((n / 2)) * 2 - 1;
 		}else{
+			System.out.println(n / 2);
 			return (int)Math.round((n / 2)) * 2 + 1;
 		}
 	}
