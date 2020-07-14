@@ -9,7 +9,8 @@ class nearestodd {
 		if((n / 2) % 2 == 0){
 			return (int)Math.round((n / 2)) * 2 - 1;
 		}else{
-			int digit = (int) Math.round(n);
+			int digit = (int)(n);
+			System.out.println(digit);
 			if(digit % 2 == 1){
 				return digit;
 			}else{
