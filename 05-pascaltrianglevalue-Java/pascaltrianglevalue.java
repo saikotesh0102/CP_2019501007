@@ -8,6 +8,13 @@
 class pascaltrianglevalue {
 	public int fun_pascaltrianglevalue(int row, int col){
 		// your code goes here
-		return 1;	
+		if(row == 0 || row == col){
+			return 1;
+		}
+		return (fun_pascaltrianglevalue(row - 1, col) + fun_pascaltrianglevalue(row - 1, col - 1)); 	
+	}
+	
+	public static void main(String[] args) {
+		
 	}
 }
