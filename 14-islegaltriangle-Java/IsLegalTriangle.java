@@ -8,6 +8,10 @@
 public class IsLegalTriangle {
 	public boolean isLegalTriangle(double s1, double s2, double s3) {
 		// Your code goes here
-		return false;
+		if(s1 + s2 <= s3 || s1 + s3 <= s2 || s2 + s3 <= s1){
+			return false;
+		}else{
+			return true;
+		}
 	}
 }
