@@ -5,6 +5,7 @@
 // Think about this while you're implementing:
 // why is it easier to add an "insert_first"
 // function than just use "append"?"""
+// Sai Koteswara Rao Ch
 
 class Element{
 	int value;
@@ -35,12 +36,19 @@ class LinkedList{
 	}
 
 	public void insert_first(Element new_element){
-		 // "Insert new element as the head of the LinkedList"
+		// "Insert new element as the head of the LinkedList"
+		new_element.next = this.head;
+		head = new_element;
 	}
 
 	public Element delete_first(){
-		return this.head;
-	   // "Delete the first (head) element in the LinkedList as return it"
+		// "Delete the first (head) element in the LinkedList as return it"
+		if (this.head == null){
+			return null;
+		}
+		Element temp = this.head;
+		this.head = this.head.next;
+		return temp;
 	}
 }
 
@@ -53,10 +61,11 @@ public class stacks{
 
 	public void push(Element e){
 		// "Push (add) a new element onto the top of the stack"
+		ll.insert_first(e);
 	}
 
 	public Element pop(){
-		return new Element(5);
+		return ll.delete_first();
 	}
 
 	public static void main(String[] args) {
