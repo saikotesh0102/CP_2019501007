@@ -7,6 +7,12 @@
 public class LineIntersection {
 	public int lineIntersection(int m1, int b1, int m2, int b2) {
 		// Your code goes here
-		return 1;
+		if(m1 == m2 && b1 == b2){
+			return 0;
+		}else if(m1 % m2 == 0 || m2 % m1 == 0){
+			return 0;
+		}else{
+			return 1;
+		}
 	}
 }
