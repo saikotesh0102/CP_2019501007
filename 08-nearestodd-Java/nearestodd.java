@@ -6,9 +6,14 @@
 class nearestodd {
 	public int fun_nearestodd(double n){
 		// your code goes here
-			return 0;
+		if((n / 2) % 2 == 0){
+			return (int)Math.round((n / 2)) * 2;
+		}else{
+			return (int)Math.round((n / 2)) * 2 + 1;
+		}
+	}
+
+	public static void main(String[] args) {
+		
 	}
 }
-
-
-
