@@ -11,7 +11,6 @@
 // # fabric that must be purchased (as purchases must be in whole yards)
 // # . Hint: you may want to use fabricYards, which you just wrote!
 
-
 class fabricyards {
 	public int fun_fabricyards(int inches){
 		// your code goes here
@@ -24,7 +23,11 @@ class fabricyards {
 
 	public int fun_fabricexcess(int inches){
 		// your code goes here
-		return 0;
+		if(inches % 36 == 0){
+			return 0;
+		}else{
+			return 36 - (inches % 36);
+		}
 	}
 
 	public static void main(String[] args) {
