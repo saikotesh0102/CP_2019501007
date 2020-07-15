@@ -8,6 +8,13 @@
 public class DigitCount {
 	public int digitCount(int n) {
 		// Your code goes here
-		return 52311231;
+		if(n == 0){
+			return 1;
+		}
+		return (int)Math.floor(Math.log10(Math.abs(n)) + 1);
+	}
+
+	public static void main(String[] args) {
+		
 	}
 }
