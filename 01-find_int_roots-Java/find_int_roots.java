@@ -10,9 +10,15 @@
 class find_int_roots {
 	public int[] fun_find_int_roots(int a, int b, int c){
 		// your code goes here
-		
-		int[] arr = {a,b,c};
+
+		int r1 = (-b + (int)Math.sqrt((b * b) - 4 * a * c))/2 * a;
+		int r2 = (-b - (int)Math.sqrt((b * b) - 4 * a * c))/2 * a;
+
+		int[] arr = {Math.min(r1, r2),Math.max(r1, r2)};
 		return arr;
-			
+	}
+
+	public static void main(String[] args) {
+		
 	}
 }
