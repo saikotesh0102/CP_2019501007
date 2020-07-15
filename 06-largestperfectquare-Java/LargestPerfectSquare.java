@@ -10,6 +10,12 @@
 public class LargestPerfectSquare {
 	public int largestPerfectSquare(int n) {
 		// Your code goes here
-		return 1;
+		int i;
+		for(i = n; i >= 1; i--){
+			if((int)Math.sqrt(i) * (int)Math.sqrt(i) == i){
+				break;
+			}
+		}
+		return i;
 	}
 }
