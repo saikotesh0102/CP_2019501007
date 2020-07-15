@@ -4,4 +4,15 @@
 
 def mostfrequentdigit(n):
 	# your code goes here
-	pass
+	d = {}
+	for i in list(str(n)):
+		if i not in d:
+			d[i] = list(str(n)).count(i)
+
+	maximum = max(d.values())
+	l = []
+	for i in d:
+		if d[i] == maximum:
+			l.append(i)
+
+	return int(min(l))
