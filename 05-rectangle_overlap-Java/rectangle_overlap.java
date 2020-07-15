@@ -7,9 +7,12 @@
 // # the x-coordinate goes up while you head right, the y-coordinate goes up while you 
 // # head down (so we say that "up is down")
 
-import java.lang.Math.*;
 class rectangle_overlap {
 	public boolean fun_rectangle_overlap(int left1, int top1, int width1, int height1, int left2, int top2, int width2, int height2){
-		return true;
+		return false;
+	}
+
+	public static void main(String[] args) {
+		
 	}
 }
