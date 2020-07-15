@@ -11,6 +11,13 @@
 public class GCD {
 	public int gcd(int m, int n) {
 		// Your code goes here
-		return 1;
+		if(n == 0){
+			return m;
+		}
+		return gcd(n, m % n);
+	}
+
+	public static void main(String[] args) {
+		
 	}
 }
