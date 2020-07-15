@@ -17,7 +17,7 @@ public class TestJUnit {
    @Test
    public void testCase1() {
 		assertEquals(new MostFrequentDigit().mostFrequentDigit(-24), 2);
-      assertEquals(new MostFrequentDigit().mostFrequentDigit(0), 1);
+      assertEquals(new MostFrequentDigit().mostFrequentDigit(0), 0);
       assertEquals(new MostFrequentDigit().mostFrequentDigit(26011), 1);
       assertEquals(new MostFrequentDigit().mostFrequentDigit(1102300), 0);
    }
