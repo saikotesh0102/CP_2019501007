@@ -17,6 +17,29 @@
 public class IsHappyNumber {
 	public boolean isHappyNumber(int n) {
 		// your code goes here
+		int num = Math.abs(n);
+		if(num == 1){
+			return true;
+		}
+		int sum = num; 
+		int x = num;
+
+		while(sum > 9){
+			sum = 0;
+			while(x > 0){
+				int d = x % 10;
+				sum = sum + d * d;
+				x = x / 10;
+			}
+			if(sum == 1){
+				return true;
+			}
+			x = sum;
+		}
 		return false;
+	}
+
+	public static void main(String[] args) {
+		
 	}
 }
