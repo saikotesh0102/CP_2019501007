@@ -10,8 +10,9 @@ public class DigitCount {
 		// Your code goes here
 		if(n == 0){
 			return 1;
+		}else{
+			return (int)Math.floor(Math.log10(Math.abs(n)) + 1);
 		}
-		return (int)Math.floor(Math.log10(Math.abs(n)) + 1);
 	}
 
 	public static void main(String[] args) {
