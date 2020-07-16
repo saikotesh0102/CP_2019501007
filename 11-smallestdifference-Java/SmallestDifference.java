@@ -11,6 +11,7 @@ public class SmallestDifference {
     public int smallestDifference(int[] a) {
         // Your code goes here
         Arrays.sort(a);
+        System.out.println(a[0] + " " + a[1]);
         return a[1] - a[0];
     }
 
