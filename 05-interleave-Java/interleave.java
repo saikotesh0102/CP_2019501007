@@ -17,6 +17,7 @@ class interleave {
 			for (int i = 0; i < s1.length() || i < s2.length(); i++) {
 				if(i >= s1.length()){
 					for(int j = i; j < s2.length(); j++){
+						System.out.println(s2.charAt(j));
 						res = res + s2.charAt(j);
 					}
 				}else if(i >= s2.length()){
