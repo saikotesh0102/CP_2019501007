@@ -6,6 +6,22 @@
 public class RemoveDuplicate {
 	public String removeDuplicate(String text) {
 		// Your code goes here
-		return "";
+		char[] arr = text.toCharArray();
+		int count = 1;
+		int flag = 1;
+
+		while(flag != arr.length){
+			if(arr[flag] != arr[flag - 1]){
+				arr[count] = arr[flag];
+				count++;
+			}
+			flag++;
+		}
+		text = new String(arr);
+		return text.substring(0, count);
+	}
+
+	public static void main(String[] args) {
+		
 	}
 }
