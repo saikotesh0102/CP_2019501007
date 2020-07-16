@@ -10,7 +10,6 @@
 // # assert(nthHappyNumber(6) == 28)
 // # assert(nthHappyNumber(7) == 31)
 
-
 class nth_happy_number {
 	public int fun_nth_happy_number(int n){
 		// your code goes here
@@ -33,7 +32,7 @@ class nth_happy_number {
 	public boolean isHappyNumber(int n) {
 		// your code goes here
 		int num = Math.abs(n);
-		if(num == 1){
+		if(num == 1 || n == 7){
 			return true;
 		}
 		int sum = num; 
@@ -51,12 +50,13 @@ class nth_happy_number {
 			}
 			x = sum;
 		}
+		if(sum == 7){
+			return true;
+		}
 		return false;
 	}
 
 	public static void main(String[] args) {
-		nth_happy_number ob = new nth_happy_number();
-		ob.fun_nth_happy_number(0);
-		ob.fun_nth_happy_number(1);
+
 	}
 }
