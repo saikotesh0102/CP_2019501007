@@ -15,9 +15,8 @@ class nth_happy_number {
 	public int fun_nth_happy_number(int n){
 		// your code goes here
 		int start = 2;
-		int count = 1;
+		int count = 0;
 		while(true){
-			System.out.println("Hello");
 			if(n == 0){
 				return 1;
 			}
