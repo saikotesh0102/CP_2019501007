@@ -8,7 +8,30 @@
 
 class interleave {
 	public String fun_interleave(String s1, String s2){
-		return "";
+		String res = ""; 
+		if(s1.length() == 0){
+			return res + s2;
+		}else if(s2.length() == 0){
+			return res + s1;
+		}else{
+			for (int i = 0; i < s1.length() || i < s2.length(); i++) {
+				if(i >= s1.length()){
+					for(int j = i; j < s2.length(); j++){
+						res = res + s2.charAt(j);
+						System.out.println(res);
+					}
+				}else if(i >= s2.length()){
+					res = res + s1.substring(i, s1.length());
+				}else{
+					res = res + s1.charAt(i) + s2.charAt(i);
+				}
+			}
+			return res;
+		}
 	}
-	
+
+	public static void main(String[] args) {
+		interleave ob = new interleave();
+		System.out.println(ob.fun_interleave("a#", "cD!f2"));
+	}
 }
