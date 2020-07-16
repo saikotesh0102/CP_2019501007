@@ -29,4 +29,8 @@ public class MatrixAdd {
 		}
 		return null;
 	}
+
+	public static void main(String[] args) {
+		
+	}
 }
