@@ -19,7 +19,7 @@ public class MatrixAdd {
 	public int[][] matrixAdd(int[][] L, int[][] M) {
 		// your code goes here
 		int[][] res = new int[L.length][L[0].length];
-		if(L.length == M.length && L[0].length == M[0].length){
+		if(L.length == M.length && L[1].length == M[1].length){
 			for(int i = 0; i < L.length; i++){
 				for (int j = 0; j < L[0].length; j++) {
 					res[i][j] = L[i][j] + M[i][j];
