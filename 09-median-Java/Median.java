@@ -9,10 +9,9 @@ public class Median {
 	public int median(double[] list) {
 		// Your code goes here
 		Arrays.sort(list);
-		if(list.length % 2 != 0){
-			return (int) list[list.length / 2];
-		}else{
+		if(list.length % 2 == 0){
 			return (int)((list[(list.length / 2) - 1] + list[list.length / 2]) / 2.0);
 		}
+		return (int) list[list.length / 2];
 	}
 }
