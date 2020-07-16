@@ -1,3 +1,5 @@
+import java.util.*;
+
 // removeDuplicate(text) [10 pts]
 // Write a program to remove all the duplicate characters from a given input String,e.g.
 // if given String is "JavaPython" then the output should be "JavPython".
@@ -6,19 +8,17 @@
 public class RemoveDuplicate {
 	public String removeDuplicate(String text) {
 		// Your code goes here
-		char[] arr = text.toCharArray();
-		int count = 1;
-		int flag = 1;
-
-		while(flag != arr.length){
-			if(arr[flag] != arr[flag - 1]){
-				arr[count] = arr[flag];
-				count++;
-			}
-			flag++;
+		char[] chars = text.toCharArray();
+		Set<Character> charSet = new LinkedHashSet<Character>();
+		for (char c : chars) {
+			charSet.add(c);
 		}
-		text = new String(arr);
-		return text.substring(0, count);
+
+		StringBuilder sb = new StringBuilder();
+		for (Character character : charSet) {
+			sb.append(character);
+		}
+		return sb.toString();
 	}
 
 	public static void main(String[] args) {
