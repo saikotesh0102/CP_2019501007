@@ -8,7 +8,7 @@
 def issorted(a):
 	# your code goes here
 	asc = sorted(a)
-	des = sorted(a, reversed = True)
+	des = sorted(a, reverse = True)
 
 	if a == asc or a == des:
 		return True
