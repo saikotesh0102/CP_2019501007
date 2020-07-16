@@ -10,8 +10,8 @@ public class Median {
 		// Your code goes here
 		Arrays.sort(list);
 		if(list.length % 2 == 0){
-			return (int)((list[(list.length / 2) - 1] + list[list.length / 2]) / 2.0);
+			return (int)((list[(list.length / 2) - 1] + list[list.length / 2]) / 2);
 		}
-		return (int) list[list.length / 2];
+		return (int) list[list.length - 1 / 2];
 	}
 }
