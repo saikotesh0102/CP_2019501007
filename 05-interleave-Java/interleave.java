@@ -17,7 +17,6 @@ class interleave {
 			for (int i = 0; i < s1.length() || i < s2.length(); i++) {
 				if(i >= s1.length()){
 					for(int j = i; j < s2.length(); j++){
-						System.out.println(s2.charAt(j) + " " + s2.length());
 						res = res + s2.charAt(j);
 					}
 				}else if(i >= s2.length()){
@@ -32,6 +31,6 @@ class interleave {
 
 	public static void main(String[] args) {
 		interleave ob = new interleave();
-		System.out.println(ob.fun_interleave("a#", "cD!f2"));
+		System.out.println(ob.fun_interleave("a#sfgjfeel klsddjlf", "cD!f2sd"));
 	}
 }
