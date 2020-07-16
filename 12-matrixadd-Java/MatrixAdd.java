@@ -20,8 +20,8 @@ public class MatrixAdd {
 		// your code goes here
 		int[][] res = new int[L.length][L.length];
 		if(L.length == M.length){
-			for(int i = 0; i < L.length; i++){
-				for (int j = 0; j < L.length; j++) {
+			for(int i = 0; i <= L.length; i++){
+				for (int j = 0; j <= L.length; j++) {
 					res[i][j] = L[i][j] + M[i][j];
 					System.out.println(res[i][j]);
 				}
