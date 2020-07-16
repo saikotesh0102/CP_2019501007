@@ -14,13 +14,18 @@
 class nth_happy_number {
 	public int fun_nth_happy_number(int n){
 		// your code goes here
-		int start = 1;
+		if(n == 0){
+			return 1;
+		}
+		int start = 2;
 		int count = 0;
 		while(true){
-			if(isHappyNumber(start) && count == n){
-				return start;
+			if(isHappyNumber(start)){
+				count = count + 1;
+				if(count == n){
+					return start;
+				}
 			}
-			count = count + 1;
 			start = start + 1;
 		}
 	}
