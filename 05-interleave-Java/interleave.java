@@ -5,7 +5,6 @@
 // # string onto the end of the new string. For example ('a#', 'cD!f2') would return 
 // # the string "ac#D!f2". Assume that both s1 and s2 will always be strings.
 
-
 class interleave {
 	public String fun_interleave(String s1, String s2){
 		String res = ""; 
@@ -16,10 +15,9 @@ class interleave {
 		}else{
 			for (int i = 0; i < s1.length() || i < s2.length(); i++) {
 				if(i >= s1.length()){
-					res = res + s2.substring(i, s2.length());
-					break;
+					return res + s2.substring(i, s2.length());
 				}else if(i >= s2.length()){
-					res = res + s1.substring(i, s1.length());
+					return res + s1.substring(i, s1.length());
 				}else{
 					res = res + s1.charAt(i) + s2.charAt(i);
 				}
@@ -29,7 +27,6 @@ class interleave {
 	}
 
 	public static void main(String[] args) {
-		interleave ob = new interleave();
-		System.out.println(ob.fun_interleave("a#sfgjfeel klsddjlf", "cD!f2sd"));
+		
 	}
 }
