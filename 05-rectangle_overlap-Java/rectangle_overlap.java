@@ -9,13 +9,17 @@
 
 class rectangle_overlap {
 	public boolean fun_rectangle_overlap(int left1, int top1, int width1, int height1, int left2, int top2, int width2, int height2){
-		int x1 = Math.max(left1, left2);
-		int x2 = Math.min(top1, top2);
+		width1 = width1 + left1;
+		width2 = width2 + left2;
 
-		int y1 = Math.max(height1, height2);
-		int y2 = Math.min(width1, width2);
+		if(left2 > width1 || left1 > width2){
+			return false;
+		}
 
-		if(x1 > x2 || y1 > y2){
+		height1 = height1 + top1;
+		height2 = height2 + top2;
+
+		if(top2 > height1 || top1 > height2){
 			return false;
 		}
 		return true;
