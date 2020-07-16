@@ -6,6 +6,6 @@
 public class IsRotated {
 	public boolean isRotated(String str1, String str2) {
 		// Your code goes here
-		return false;
+		return (str1.length() == str2.length()) && ((str1 + str1).contains(str2));
 	}
 }
