@@ -22,8 +22,8 @@ public class MatrixAdd {
 		if(L.length == M.length && L[0].length == M[0].length){
 			for(int i = 0; i < L.length; i++){
 				for (int j = 0; j < L[0].length; j++) {
-					System.out.println(L[i][j] + " " + M[i][j] + " " + L[i][j] + M[i][j]);
 					res[i][j] = L[i][j] + M[i][j];
+					System.out.println(L[i][j] + " " + M[i][j] + " " + res[i][j]);
 				}
 			}
 			return res;
