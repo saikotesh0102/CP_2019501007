@@ -6,7 +6,10 @@
 
 class replace {
 	public String fun_replace(String s1, String s2, String s3){
-		return s1;
+		return s1.replace(s2, s3);
 	}
 	
+	public static void main(String[] args) {
+		
+	}
 }
