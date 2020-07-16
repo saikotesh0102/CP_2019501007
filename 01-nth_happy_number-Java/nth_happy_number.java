@@ -21,8 +21,10 @@ class nth_happy_number {
 		int count = 0;
 		while(true){
 			if(isHappyNumber(start)){
+				System.out.println(start);
 				count = count + 1;
 				if(count == n){
+					System.out.println(start + ":" + n);
 					return start;
 				}
 			}
