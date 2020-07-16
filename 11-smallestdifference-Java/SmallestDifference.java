@@ -8,11 +8,17 @@ import java.util.*;
 
 public class SmallestDifference {
 
-    public int smallestDifference(int[] a) {
+    public int smallestDifference(int[] arr) {
         // Your code goes here
-        Arrays.sort(a);
-        System.out.println(a[0] + " " + a[1]);
-        return a[1] - a[0];
+        int min = Integer.MAX_VALUE;
+        for(int i = 0; i < arr.length - 1; i++){
+            for(int j = 0; j < arr.length; j++){
+                if (Math.abs((arr[i] - arr[j]) )< min){
+                    min = Math.abs((arr[i] - arr[j]));
+                }
+            }
+        }
+        return min;
     }
 
     public static void main(String[] args) {
