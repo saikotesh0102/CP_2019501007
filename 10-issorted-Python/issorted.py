@@ -7,4 +7,9 @@
 
 def issorted(a):
 	# your code goes here
-	pass
+	asc = sorted(a)
+	des = sorted(a, reversed = True)
+
+	if a == asc or a == des:
+		return True
+	return False 
