@@ -37,7 +37,7 @@ class nth_happy_prime {
 	public boolean isHappyNumber(int n) {
 		// your code goes here
 		int num = Math.abs(n);
-		if(num == 1 || n == 7){
+		if(num == 1){
 			return true;
 		}
 		int sum = num; 
@@ -55,15 +55,10 @@ class nth_happy_prime {
 			}
 			x = sum;
 		}
-		if(sum == 7){
-			return true;
-		}
 		return false;
 	}
 
 	public static void main(String[] args) {
-		nth_happy_prime ob = new nth_happy_prime();
-		System.out.println(ob.fun_nth_happy_prime(0));
-		System.out.println(ob.fun_nth_happy_prime(1));
+		
 	}
 }
