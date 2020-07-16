@@ -18,6 +18,15 @@
 public class MatrixAdd {
 	public int[][] matrixAdd(int[][] L, int[][] M) {
 		// your code goes here
-		return new int[0][0];
+		int[][] res = new int[L.length][L.length];
+		if(L.length == M.length){
+			for(int i = 0; i < L.length; i++){
+				for (int j = 0; j < L.length; j++) {
+					res[i][j] = L[i][j] + M[i][j];
+				}
+			}
+			return res;
+		}
+		return null;
 	}
 }
