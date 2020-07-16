@@ -12,7 +12,22 @@
 class applycaesarcipher {
 	public String fun_applycaesarcipher(String msg, int shift){
 		// your code goes here
-		return "";
+		StringBuilder res = new StringBuilder();
+		for(int i = 0; i < msg.length(); i++){
+			if(Character.isUpperCase(msg.charAt(i))){
+				char ch = (char)(((int)msg.charAt(i) + shift - 65) % 26 + 65); 
+                res.append(ch); 
+			}else if(Character.isLowerCase(msg.charAt(i))){
+				char ch = (char)(((int)msg.charAt(i) + shift - 97) % 26 + 97); 
+                res.append(ch); 
+			}else{
+				res.append(msg.charAt(i));
+			}
+		}
+		return res.toString();
 	}
-	
+
+	public static void main(String[] args) {
+		
+	}
 }
