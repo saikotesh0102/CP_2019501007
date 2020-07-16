@@ -10,10 +10,9 @@ public class SmallestDifference {
         // Your code goes here
         int min = Integer.MAX_VALUE;
         for(int i = 0; i < arr.length - 1; i++){
-            for(int j = 0; j < arr.length; j++){
+            for(int j = i + 1; j < arr.length; j++){
                 if (Math.abs((arr[i] - arr[j])) < min){
                     min = Math.abs((arr[i] - arr[j]));
-                    System.out.println(min);
                 }
             }
         }
