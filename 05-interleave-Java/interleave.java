@@ -16,9 +16,8 @@ class interleave {
 		}else{
 			for (int i = 0; i < s1.length() || i < s2.length(); i++) {
 				if(i >= s1.length()){
-					for(int j = i; j < s2.length(); j++){
-						res = res + s2.charAt(j);
-					}
+					res = res + s2.substring(i, s2.length());
+					break;
 				}else if(i >= s2.length()){
 					res = res + s1.substring(i, s1.length());
 				}else{
