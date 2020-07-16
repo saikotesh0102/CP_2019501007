@@ -62,6 +62,8 @@ class nth_happy_prime {
 	}
 
 	public static void main(String[] args) {
-		
+		nth_happy_prime ob = new nth_happy_prime();
+		System.out.println(ob.fun_nth_happy_prime(0));
+		System.out.println(ob.fun_nth_happy_prime(1));
 	}
 }
