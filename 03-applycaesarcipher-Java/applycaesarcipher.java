@@ -14,14 +14,14 @@ class applycaesarcipher {
 		// your code goes here
 		StringBuilder res = new StringBuilder();
 		for(int i = 0; i < msg.length(); i++){
-			if(Character.isUpperCase(msg.charAt(i))){
+			if(msg.charAt(i) == ' '){
+				res.append(msg.charAt(i));
+			}else if(Character.isUpperCase(msg.charAt(i))){
 				char ch = (char)(((int)msg.charAt(i) + shift - 65) % 26 + 65); 
                 res.append(ch); 
-			}else if(Character.isLowerCase(msg.charAt(i))){
-				char ch = (char)(((int)msg.charAt(i) + shift - 97) % 26 + 97); 
-                res.append(ch); 
 			}else{
-				res.append(msg.charAt(i));
+				char ch = (char)(((int)msg.charAt(i) + shift - 97) % 26 + 97); 
+                res.append(ch);
 			}
 		}
 		return res.toString();
