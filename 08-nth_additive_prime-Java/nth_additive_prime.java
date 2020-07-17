@@ -46,6 +46,6 @@ class nth_additive_prime {
 
 	public static void main(String[] args) {
 		nth_additive_prime ob = new nth_additive_prime();
-		System.out.println(ob.fun_nth_additive_prime(5));
+		System.out.println(ob.fun_nth_additive_prime(2));
 	}
 }
