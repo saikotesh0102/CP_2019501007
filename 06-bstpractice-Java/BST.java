@@ -1,4 +1,3 @@
-
 class Node {
     public int value;
     public Node left, right;
@@ -17,11 +16,12 @@ public class BST {
     }
 
     public void insert(int value) {
-    	// Your code goes here
+        // Your code goes here
     }
 
     private void insert(Node node, int value) {
-    	// Your code goes here
+        // Your code goes here
+        
     }
 
     public boolean search(int value) {
@@ -33,5 +33,4 @@ public class BST {
     	// Your code goes here
     	return false;
     }
-
 }
