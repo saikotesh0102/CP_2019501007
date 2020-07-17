@@ -8,6 +8,8 @@
 public class IsRotation {
 	public boolean isRotation(int x, int y) {
 		// Your code goes here
-		return false;
+		String str1 = Integer.toString(x);
+		String str2 = Integer.toString(y);
+		return (str1.length() == str2.length()) && ((str1 + str1).contains(str2));
 	}
 }
