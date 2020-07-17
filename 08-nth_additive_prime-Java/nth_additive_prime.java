@@ -12,7 +12,6 @@ class nth_additive_prime {
 		int count = 0;
 		while(true){
 			if(isPrime(flag) && isPrime(additive(flag))){
-				System.out.println(flag);
 				count = count + 1;
 				if(count == n){
 					return flag;
