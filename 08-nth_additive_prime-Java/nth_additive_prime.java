@@ -9,18 +9,17 @@ class nth_additive_prime {
 			return 2;
 		}
 		int flag = 3;
+		int count = 0;
 		while(true){
-			int count = 0;
 			if(isPrime(flag) && isPrime(additive(flag))){
 				System.out.println(flag);
 				count = count + 1;
 				if(count == n){
-					break;
+					return flag;
 				}
 			}
 			flag = flag + 2;
 		}
-		return flag;
 	}
 
 	public boolean isPrime(int n) { 
