@@ -13,10 +13,11 @@
 
 class isfactorish {
 	public boolean fun_isfactorish(int n){
+		int flag = Math.abs(n);
 		if(Integer.toString(Math.abs(n)).length() != 3){
 			return false;
 		}
-		int digit = Math.abs(n);
+		int digit = flag;
 		int a = n % 10;
 		n = n / 10;
 		int b = n % 10;
@@ -26,5 +27,9 @@ class isfactorish {
 			return true;
 		}
 		return false;
-	}	
+	}
+	
+	public static void main(String[] args) {
+		
+	}
 }
