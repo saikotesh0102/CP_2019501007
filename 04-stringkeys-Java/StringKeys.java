@@ -8,19 +8,22 @@ public class StringKeys {
 
 	public void store(String key) {
 		// Your code goes here
-		ArrayList<String> list = new ArrayList<String>();
-		if(table.keySet().contains(calculate_hash_value(key))){
-			list.add(key);
-			table.put(calculate_hash_value(key),list);
-		}else{
-			list.add(key);
-			table.put(calculate_hash_value(key),list);
-		}
+		// ArrayList<String> list = new ArrayList<String>();
+		// if(table.keySet().contains(calculate_hash_value(key))){
+		// 	list.add(key);
+		// 	table.put(calculate_hash_value(key),list);
+		// }else{
+		// 	list.add(key);
+		// 	table.put(calculate_hash_value(key),list);
+		// }
 	}
 
 	public int lookup(String key) {
-		if(table.get(calculate_hash_value(key)).contains(key)){
-			return calculate_hash_value(key);
+		// Your code goes here
+		for(int data : table.keySet()){
+			if(table.get(data).contains(key)){
+				return calculate_hash_value(key);
+			}
 		}
 		return -1;
 	}
