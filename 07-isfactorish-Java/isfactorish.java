@@ -23,7 +23,7 @@ class isfactorish {
 		int b = n % 10;
 		n = n / 10;
 		int c = n % 10;
-		if((a != b || b != c || c != a) && (a != 0 || b != 0 || c != 0) && ((digit % a == 0) && (digit % b == 0) && (digit % c == 0))){
+		if((a != b && b != c && c != a) && (a != 0 && b != 0 && c != 0) && ((digit % a == 0) && (digit % b == 0) && (digit % c == 0))){
 			return true;
 		}
 		return false;
