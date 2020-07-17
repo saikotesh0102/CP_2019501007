@@ -1,18 +1,28 @@
 import java.util.*;
 
 public class StringKeys {
-	Hashtable<Integer, List<String>> table;
+	Hashtable<Integer, ArrayList<String>> table;
 	public StringKeys() {
 		// Your code goes here
 	}
 
 	public void store(String key) {
 		// Your code goes here
+		ArrayList<String> list = new ArrayList<String>();
+		if(table.keySet().contains(calculate_hash_value(key))){
+			list.add(key);
+			table.put(calculate_hash_value(key),list);
+		}else{
+			list.add(key);
+			table.put(calculate_hash_value(key),list);
+		}
 	}
 
 	public int lookup(String key) {
-		// Your code goes here
-		return 1;
+		if(table.get(calculate_hash_value(key)).contains(key)){
+			return calculate_hash_value(key);
+		}
+		return -1;
 	}
 
 	public int calculate_hash_value(String key) {
