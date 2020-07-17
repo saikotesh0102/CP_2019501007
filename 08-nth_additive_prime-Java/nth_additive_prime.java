@@ -8,10 +8,11 @@ class nth_additive_prime {
 		if(n == 0){
 			return 2;
 		}
+		int flag = 3;
 		while(true){
-			int flag = 3;
 			int count = 0;
 			if(isPrime(flag) && isPrime(additive(flag))){
+				System.out.println(flag);
 				count = count + 1;
 				if(count == n){
 					return flag;
@@ -44,6 +45,6 @@ class nth_additive_prime {
 
 	public static void main(String[] args) {
 		nth_additive_prime ob = new nth_additive_prime();
-		System.out.println(ob.fun_nth_additive_prime(1));
+		System.out.println(ob.fun_nth_additive_prime(5));
 	}
 }
