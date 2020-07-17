@@ -15,11 +15,12 @@ class nth_additive_prime {
 				System.out.println(flag);
 				count = count + 1;
 				if(count == n){
-					return flag;
+					break;
 				}
 			}
 			flag = flag + 2;
 		}
+		return flag;
 	}
 
 	public boolean isPrime(int n) { 
