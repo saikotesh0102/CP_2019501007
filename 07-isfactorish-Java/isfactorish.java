@@ -13,6 +13,18 @@
 
 class isfactorish {
 	public boolean fun_isfactorish(int n){
+		if(Integer.toString(Math.abs(n)).length() != 3){
+			return false;
+		}
+		int digit = Math.abs(n);
+		int a = n % 10;
+		n = n / 10;
+		int b = n % 10;
+		n = n / 10;
+		int c = n % 10;
+		if((a != b || b != c || c != a) && (a != 0 || b != 0 || c != 0) && ((digit % a == 0) && (digit % b == 0) && (digit % c == 0))){
+			return true;
+		}
 		return false;
 	}	
 }
