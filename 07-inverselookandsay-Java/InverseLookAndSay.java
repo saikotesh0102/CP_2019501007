@@ -9,8 +9,16 @@
 // inverseLookAndSay([(2,3),(1,8),(4,3)]) == [3,3,8,3,3,3,3])
 
 public class InverseLookAndSay {
-	public int[] inverseLookAndSay(String a) {
+	public int[] inverseLookAndSay(String str) {
 		// Your code goes here
+		if(str.equals("")){
+			return new int[0];
+		}
+		System.out.println(str);
 		return new int[0];
+	}
+
+	public static void main(String[] args) {
+		
 	}
 }
