@@ -14,7 +14,7 @@ public class LookAndSay {
 		// Your code goes here
 		String str = "";
 		if(a.length == 0){
-			return str;
+			return "[]";
 		}
 
 		boolean[] visited = new boolean[a.length];
@@ -33,9 +33,10 @@ public class LookAndSay {
 					count++; 
 				} 
 			}
-			str = str + "(" + count + ", " + a[i] + ")";
+			str = str + "(" + count + ", " + a[i] + "), ";
 		}
-		return str;
+		System.out.println(str);
+		return "[" + str + "]";
 	}
 
 	public static void main(String[] args) {
