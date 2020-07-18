@@ -44,7 +44,6 @@ public class LookAndSay {
 				str = str + arr[j] + ", ";
 			}
 		}
-		System.out.println("[" + str + "]");
 		return "[" + str + "]";
 	}
 
