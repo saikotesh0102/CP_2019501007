@@ -35,9 +35,17 @@ public class LookAndSay {
 			}
 			res = res + "(" + count + ", " + a[i] + ")/";
 		}
-		String[] arr = res.split("/",2);
-		System.out.println(arr.toString());
-		return "[" + res + "]";
+		String[] arr = res.split("/");
+		String str = "";
+		for (int j = 0; j < arr.length; j++) {
+			if(j == arr.length - 1){
+				str = str + arr[j];
+			}else{
+				str = str + arr[j] + ",";
+			}
+		}
+		System.out.println("[" + str + "]");
+		return "[" + str + "]";
 	}
 
 	public static void main(String[] args) {
