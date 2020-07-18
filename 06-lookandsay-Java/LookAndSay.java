@@ -12,11 +12,11 @@ import java.util.*;
 public class LookAndSay {
 	public String lookAndSay(int[] a) {
 		// Your code goes here
+		String str = "";
 		if(a.length == 0){
-			return "";
+			return str;
 		}
 
-		String str = "";
 		boolean[] visited = new boolean[a.length];
 		Arrays.fill(visited, false);
 
@@ -33,7 +33,7 @@ public class LookAndSay {
 					count++; 
 				} 
 			}
-			str = str + "(" + count + "," + a[i] + ")";
+			str = str + "(" + count + ", " + a[i] + "), ";
 		}
 		return str;
 	}
