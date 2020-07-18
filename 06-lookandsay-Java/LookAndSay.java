@@ -33,9 +33,8 @@ public class LookAndSay {
 					count++; 
 				} 
 			}
-			str = str + "(" + count + ", " + a[i] + "), ";
+			str = str + "(" + count + ", " + a[i] + ") ";
 		}
-		System.out.println(str);
 		return "[" + str + "]";
 	}
 
