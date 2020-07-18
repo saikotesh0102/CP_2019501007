@@ -11,11 +11,12 @@
 public class InverseLookAndSay {
 	public int[] inverseLookAndSay(String str) {
 		// Your code goes here
-		if(str.equals("")){
+		if(str.equals("[]")){
 			return new int[0];
 		}
-		System.out.println(str);
-		return new int[0];
+		
+		int[] arr = new int[0];
+		return arr;
 	}
 
 	public static void main(String[] args) {
