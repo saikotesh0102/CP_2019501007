@@ -13,18 +13,18 @@ def lookandsay(a):
 		return []
 	
 	count = 1
-	previous = 0
+	flag = 0
 	l = []
 	for i in range(len(a)):
 		if i == 0:
-			previous = a[i]
+			flag = a[i]
 			continue
 		
-		if a[i] == previous:
+		if a[i] == flag:
 			count = count + 1
 		else:
-			l.append((count,previous))
+			l.append((count,flag))
 			count = 1
 		prev = a[i]
-	l.append((count,previous))
+	l.append((count,flag))
 	return l
