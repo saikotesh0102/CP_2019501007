@@ -23,6 +23,6 @@ public class TestJUnit {
    @Test
    public void testCase2() {
       assertArrayEquals(new InverseLookAndSay().inverseLookAndSay("[(2, 3), (1, 8), (3, -10)]"), new int[]{3, 3, 8, -10, -10, -10});
-      assertArrayEquals(new InverseLookAndSay().inverseLookAndSay("[(2, 3), (1, 8), (4, 3)]"), new int[]{3, 3, 8, 3, 3, 3, 3});
+      assertArrayEquals(new InverseLookAndSay().inverseLookAndSay("[(6, 3), (1, 8)]"), new int[]{3, 3, 8, 3, 3, 3, 3});
    }
 }
