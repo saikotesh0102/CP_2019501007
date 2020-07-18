@@ -35,7 +35,7 @@ public class LookAndSay {
 			}
 			str = str + "(" + count + ", " + a[i] + ")";
 		}
-		System.out.println(str.split(")"));
+		System.out.println(str);
 		return "[" + str + "]";
 	}
 
