@@ -41,7 +41,7 @@ public class LookAndSay {
 			if(j == arr.length - 1){
 				str = str + arr[j];
 			}else{
-				str = str + arr[j] + ",";
+				str = str + arr[j] + ", ";
 			}
 		}
 		System.out.println("[" + str + "]");
