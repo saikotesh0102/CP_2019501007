@@ -17,6 +17,19 @@
 
 class wordwrap {
 	public String fun_wordwrap(String s, int n){
-		return "";
+		String str = s.trim().replace(" ", "-");
+		String res = "";
+		for (int i = 0; i < str.length(); i++) {
+			if(i % n == 0 && i > 1){
+				res = res + "\n" + str.charAt(i);;
+			}else{
+				res = res + str.charAt(i);
+			} 
+		}
+		return res;
+	}
+
+	public static void main(String[] args) {
+		
 	}
 }
