@@ -9,4 +9,22 @@
 
 def lookandsay(a):
 	# Your code goes here
-	pass
+	if len(a) == 0:
+		return []
+	
+	count = 1
+	previous = 0
+	l = []
+	for i in range(len(a)):
+		if i == 0:
+			previous = a[i]
+			continue
+		
+		if a[i] == previous:
+			count = count + 1
+		else:
+			l.append((count,previous))
+			count = 1
+		prev = a[i]
+	l.append((count,previous))
+	return l
