@@ -33,7 +33,7 @@ public class LookAndSay {
 					count++; 
 				} 
 			}
-			str = str + "(" + count + ", " + a[i] + "), ";
+			str = str + "(" + count + ", " + a[i] + ")";
 		}
 		return str;
 	}
