@@ -6,6 +6,21 @@
 public class CanQueenAttack {
 	public boolean canQueenAttack(int x, int y, int a, int b) {
 		// Your code goes here
+		if(x == a){
+			return true;
+		}
+
+		if(y == b){
+			return true;
+		}
+
+		if(Math.abs(x - y) == Math.abs(a - b)){
+			return true;
+		}
 		return false;
+	}
+
+	public static void main(String[] args) {
+		
 	}
 }
