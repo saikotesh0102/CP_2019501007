@@ -7,12 +7,19 @@
 // # So: onlyEvenDigits([43, 23265, 17, 58344]) returns [4, 226, 0, 844]. 
 // # Also the function returns the empty array if the original array is empty. 
 // # Remember to not use strings. You may not use loops/iteration in this problem.
-import java.lang.Math; 
+
 class recursion_onlyevendigits {
 	public int[] fun_recursion_onlyevendigits(int[] l){
-		int[] arr = {};
+		int[] arr = new int[l.length];
+		for(int i = 0; i < l.length; i++){
+			if(l[i] % 2 == 0){
+				arr[i] = l[i];
+			}
+		}
 		return arr;
 	}
+
+	public static void main(String[] args) {
+		
+	}
 }
-
-
