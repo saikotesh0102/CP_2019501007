@@ -3,16 +3,18 @@
 // contains any duplicate values (that is, 
 // if any two values in L are equal to each other), and False otherwise.
 
+import java.util.*;
+
 public class HasDuplicates {
 	public boolean hasDuplicates(int[][] arr) {
 		// Your code goes here
-		for(int i = 0; i < arr.length; i++) {
-			for(int j = 0; j < arr[i].length; j++) {
-				for(int k = j + 1; k < arr[i].length; k++){
-					if(arr[i][j] == arr[i][k]){
-						return true;
-					}
+		Set<Integer> set = new HashSet<Integer>();
+		for(int i = 0; i < arr.length; i++){
+			for(int j = 0; j < arr[i].length; j++){
+				if(set.contains(arr[i][j])){
+					return true;
 				}
+				set.add(arr[i][j]);
 			}
 		}
 		return false;
