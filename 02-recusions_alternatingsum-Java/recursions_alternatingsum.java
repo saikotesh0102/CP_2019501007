@@ -5,7 +5,22 @@
 
 
 class recursions_alternatingsum {
-	public int fun_recursions_alternatingsum(int[] l){
-		return 0;
+	public int fun_recursions_alternatingsum(int[] arr){
+		if(arr.length == 0){
+			return 0;
+		}
+		int sum = 0;
+		for(int i = 0; i < arr.length; i++){
+			if(i % 2 == 0){
+				sum = sum + arr[i];
+			}else{
+				sum = sum - arr[i];
+			}
+		}
+		return sum;
+	}
+
+	public static void main(String[] args) {
+		
 	}
 }
