@@ -24,8 +24,8 @@ public class TestJUnit {
 
    @Test
    public void testCase2() {
-      assertArrayEquals(new PowersOf3ToN().powersOf3ToN(9), new int[]{1, 3, 9});
-      // assertArrayEquals(new PowersOf3ToN().powersOf3ToN(8.9999), new int[]{1, 3});
+      // assertArrayEquals(new PowersOf3ToN().powersOf3ToN(9), new int[]{1, 3, 9});
+      assertArrayEquals(new PowersOf3ToN().powersOf3ToN(8.9999), new int[]{1, 3});
       // assertArrayEquals(new PowersOf3ToN().powersOf3ToN(9.1111), new int[]{1, 3, 9});
       // assertArrayEquals(new PowersOf3ToN().powersOf3ToN(100), new int[]{1, 3, 9, 27, 81});
    }
