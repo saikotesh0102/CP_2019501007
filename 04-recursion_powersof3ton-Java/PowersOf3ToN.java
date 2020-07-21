@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 // Recursion-Only powersOf3ToN(n) [15 pts]
 // Write the function powersOf3ToN(n) that takes a possibly-negative float or int n, and returns a list of the 
 // positive powers of 3 up to and including n. As an example, powersOf3ToN(10.5) returns [1, 3, 9]. If no such powers 
@@ -9,7 +11,8 @@ public class PowersOf3ToN {
 		if(n <= 1){
 			return new int[0];
 		}
-		int[] res = new int[(int)n/3];
+		int[] res = new int[(int)n/3 + 1];
+		System.out.println(res.length);
 		for(int i = 0; i < res.length; i++){
 			res[i] = (int)Math.pow(3, i);
 		}
@@ -17,6 +20,7 @@ public class PowersOf3ToN {
 	}
 
 	public static void main(String[] args) {
-		
+		PowersOf3ToN ob = new PowersOf3ToN();
+		System.out.println(Arrays.toString(ob.powersOf3ToN(3)));
 	}
 }
