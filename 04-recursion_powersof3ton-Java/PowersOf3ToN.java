@@ -6,6 +6,17 @@
 public class PowersOf3ToN {
 	public int[] powersOf3ToN(double n) {
 		// Your code goes here
-		return new int[0];
+		if(n <= 1){
+			return new int[0];
+		}
+		int[] res = new int[(int)n/3];
+		for(int i = 0; i < res.length; i++){
+			res[i] = (int)Math.pow(3, i);
+		}
+		return res;
+	}
+
+	public static void main(String[] args) {
+		
 	}
 }
