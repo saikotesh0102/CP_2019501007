@@ -8,10 +8,16 @@
 // # Hint: you may need to generate only Carol numbers, and then test those as you go 
 // # for primality (and you may need to think about that hint for a while for it to make sense!).
 
-
-
-class nth_carolprime {
+public class nth_carolprime {
 	public int fun_nth_carolprime(int n){
-        return 0;
+		int[] arr = new int[10];
+		for(int i = 0; i < arr.length; i++){
+			arr[i] = (int)Math.pow(Math.pow(2, i) - 1, 2) - 2;
+		}
+		return arr[n + 2];
+	}
+
+	public static void main(String[] args) {
+		
 	}
 }
