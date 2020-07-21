@@ -8,11 +8,11 @@ import java.util.*;
 public class PowersOf3ToN {
 	public int[] powersOf3ToN(double n) {
 		// Your code goes here
-		if(n <= 1){
+		if(n < 1){
 			return new int[0];
 		}
-		int[] res = new int[(int)Math.log(n) + 1];
-		System.out.println(Math.log(9));
+		int[] res = new int[(int)(Math.log(n)/Math.log(3)) + 1];
+		System.out.println(Math.log(n)/ Math.log(3));
 		for(int i = 0; i < res.length; i++){
 			res[i] = (int)Math.pow(3, i);
 		}
