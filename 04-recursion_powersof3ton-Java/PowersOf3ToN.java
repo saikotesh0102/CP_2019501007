@@ -11,8 +11,8 @@ public class PowersOf3ToN {
 		if(n <= 1){
 			return new int[0];
 		}
-		int[] res = new int[(int)n/3 + 1];
-		System.out.println(res.length);
+		int[] res = new int[]{};
+		System.out.println(Math.log(n) + 1);
 		for(int i = 0; i < res.length; i++){
 			res[i] = (int)Math.pow(3, i);
 		}
