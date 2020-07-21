@@ -16,15 +16,15 @@ import static org.junit.Assert.assertEquals;
 public class TestJUnit {
    @Test
    public void testCase1() {
-		// assertEquals(new numberofpoolballrows().fun_numberofpoolballrows(1), 1);
-      // assertEquals(new numberofpoolballrows().fun_numberofpoolballrows(3), 2);
-      // assertEquals(new numberofpoolballrows().fun_numberofpoolballrows(6), 3);
-      // assertEquals(new numberofpoolballrows().fun_numberofpoolballrows(10), 4);
-      // assertEquals(new numberofpoolballrows().fun_numberofpoolballrows(15), 5);
-      // assertEquals(new numberofpoolballrows().fun_numberofpoolballrows(21), 6);
-      // assertEquals(new numberofpoolballrows().fun_numberofpoolballrows(28), 7);
-      // assertEquals(new numberofpoolballrows().fun_numberofpoolballrows(36), 8);
-      // assertEquals(new numberofpoolballrows().fun_numberofpoolballrows(45), 9);
+		assertEquals(new numberofpoolballrows().fun_numberofpoolballrows(1), 1);
+      assertEquals(new numberofpoolballrows().fun_numberofpoolballrows(3), 2);
+      assertEquals(new numberofpoolballrows().fun_numberofpoolballrows(6), 3);
+      assertEquals(new numberofpoolballrows().fun_numberofpoolballrows(10), 4);
+      assertEquals(new numberofpoolballrows().fun_numberofpoolballrows(15), 5);
+      assertEquals(new numberofpoolballrows().fun_numberofpoolballrows(21), 6);
+      assertEquals(new numberofpoolballrows().fun_numberofpoolballrows(28), 7);
+      assertEquals(new numberofpoolballrows().fun_numberofpoolballrows(36), 8);
+      assertEquals(new numberofpoolballrows().fun_numberofpoolballrows(45), 9);
       assertEquals(new numberofpoolballrows().fun_numberofpoolballrows(46), 10);
       assertEquals(new numberofpoolballrows().fun_numberofpoolballrows(44), 9);
    }
