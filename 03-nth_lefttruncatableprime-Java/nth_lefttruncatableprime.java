@@ -6,11 +6,39 @@
 // # So nthLeftTruncatablePrime(0) retunearestKaprekarNumber(n)rns 2, and 
 // # nthLeftTruncatablePrime(10) returns 53.
 
-
-
-class nth_lefttruncatableprime {
+public class nth_lefttruncatableprime {
 	public int fun_nth_lefttruncatableprime(int n){
-		return 0;
+		if(n == 0){
+			return 2;
+		}
+		int count = 0;
+		int start = 3;
+		while(true){
+			// if(is_kaprekar(start)){
+				count = count + 1;
+				if(count == n){
+					return start;
+				}
+			// }
+			start = start + 2;
+		}
+	}
+
+	public boolean isPrime(int n) { 
+        if (n <= 1){
+			return false; 
+		}
+			
+        for (int i = 2; i < n; i++){
+            if (n % i == 0){
+				return false;
+			}
+		}
+        return true; 
+    }
+
+	public static void main(String[] args) {
+		
 	}
 }
 
