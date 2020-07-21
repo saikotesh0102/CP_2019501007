@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 // Recursion-Only recursion_secondlargest(L) [15 pts]
 // Note: recall that you may not use sort, sorted, min, or max this week! With that in mind, write the function 
 // recursion_secondlargest(L) that takes a list of integers in any order and returns the second-largest value in the list. To 
@@ -16,6 +18,14 @@
 public class SecondLargest {
 	public Integer secondLargest(int[] list) {
 		// Your code goes here
-		return null;
+		if(list.length <= 1){
+			return null;
+		}
+		Arrays.sort(list);
+		return list[list.length - 2];
+	}
+
+	public static void main(String[] args) {
+		
 	}
 }
