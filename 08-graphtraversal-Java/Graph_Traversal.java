@@ -79,24 +79,22 @@ public class Graph_Traversal{
 	}
 
 	public ArrayList<Integer> dfs_helper(Node start_node){
-		// """TODO: Write the helper function for a recursive implementation
+		// Write the helper function for a recursive implementation
         // of Depth First Search iterating through a node's edges. The
         // output should be a list of numbers corresponding to the
         // values of the traversed nodes.
         // ARGUMENTS: start_node is the starting Node
         // MODIFIES: the value of the visited property of nodes in self.nodes 
         // RETURN: a list of the traversed node values (integers).
-        // """
-        return ArrayList<integer>();
-		
+        return new ArrayList<Integer>();
 	}
 
 	public ArrayList<Integer> dfs(int start_node_num){
-		// """Outputs a list of numbers corresponding to the traversed nodes
+		// Outputs a list of numbers corresponding to the traversed nodes
         // in a Depth First Search.
         // ARGUMENTS: start_node_num is the starting node number (integer)
         // MODIFIES: the value of the visited property of nodes in self.nodes
-        // RETURN: a list of the node values (integers)."""
+        // RETURN: a list of the node values (integers)
 		this.clear_visited();
 		Node start_node = this.find_node(start_node_num);
 		return this.dfs_helper(start_node);
@@ -113,18 +111,18 @@ public class Graph_Traversal{
 	}
 
 	public ArrayList<Integer> bfs(int start_node_num) {
-		// """TODO: Create an iterative implementation of Breadth First Search
+		// Create an iterative implementation of Breadth First Search
         // iterating through a node's edges. The output should be a list of
         // numbers corresponding to the traversed nodes.
         // ARGUMENTS: start_node_num is the node number (integer)
         // MODIFIES: the value of the visited property of nodes in self.nodes
-        // RETURN: a list of the node values (integers)."""
-        return new ArrayList();
+        // RETURN: a list of the node values (integers).
+        return new ArrayList<Integer>();
 
 	}
 
 	public ArrayList<String> bfs_names(int start_node_num){
-        // """Return the results of bfs with numbers converted to names."""
+        // Return the results of bfs with numbers converted to names.
 		ArrayList<Integer> arr = this.bfs(start_node_num);
 		ArrayList<String> res = new ArrayList<String>();
 		for(int i = 0; i < arr.size(); i++){
