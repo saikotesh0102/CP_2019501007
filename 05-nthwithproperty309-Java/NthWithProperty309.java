@@ -14,7 +14,6 @@ public class NthWithProperty309 {
 		int start = 310;
 		while(true){
 			if(isProperty309(start)){
-				System.out.println(start);
 				count = count + 1;
 				if(count == n){
 					return start;
