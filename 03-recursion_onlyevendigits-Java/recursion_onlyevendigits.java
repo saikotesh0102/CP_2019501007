@@ -10,13 +10,19 @@
 
 class recursion_onlyevendigits {
 	public int[] fun_recursion_onlyevendigits(int[] l){
-		int[] arr = new int[l.length];
-		for(int i = 0; i < l.length; i++){
-			if(l[i] % 2 == 0){
-				arr[i] = l[i];
-			}
+		int[] arr = {};
+		if(l.length == 0){
+			return arr;
 		}
 		return arr;
+	}
+
+	public boolean odd_even(int n){
+		if(n % 2 == 0){
+			return true;
+		}else{
+			return false;
+		}
 	}
 
 	public static void main(String[] args) {
