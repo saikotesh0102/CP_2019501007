@@ -37,6 +37,7 @@ class nth_kaprekarnumber {
             sq_n = sq_n / 10; 
 		}
 		sq_n = n * n;
+		System.out.println(sq_n);
 
 		for(int i = 0; i < digitCount; i++){
 			int eq_parts = (int) Math.pow(10, i);
@@ -53,6 +54,7 @@ class nth_kaprekarnumber {
 	}
 
 	public static void main(String[] args) {
-		
+		nth_kaprekarnumber ob = new nth_kaprekarnumber();
+		System.out.println(ob.is_kaprekar(77778));
 	}
 }
