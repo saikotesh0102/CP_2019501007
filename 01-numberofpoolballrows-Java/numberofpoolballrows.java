@@ -7,6 +7,10 @@
 
 public class numberofpoolballrows {
 	public int fun_numberofpoolballrows(int balls) {
-		return 0;
+		System.out.println(Math.sqrt(4 * 2 * balls + 1));
+		if(Math.sqrt(4 * 2 * balls + 1) % 2 == 0){
+			return (-1 + (int)Math.sqrt(4 * 2 * balls + 1)) / 2;
+		}
+		return ((-1 + (int)Math.sqrt(4 * 2 * balls + 1)) / 2) + 1;
 	}
 }
