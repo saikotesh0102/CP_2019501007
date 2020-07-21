@@ -13,14 +13,14 @@ import org.junit.Test;
 import static org.junit.Assert.assertArrayEquals;
 
 public class TestJUnit {
-   // @Test
-   // public void testCase1() {
-   //    assertArrayEquals(new PowersOf3ToN().powersOf3ToN(0), new int[0]);
-   //    assertArrayEquals(new PowersOf3ToN().powersOf3ToN(-42), new int[0]);
-   //    assertArrayEquals(new PowersOf3ToN().powersOf3ToN(0.99), new int[0]);
-   //    assertArrayEquals(new PowersOf3ToN().powersOf3ToN(1), new int[]{1});
-   //    assertArrayEquals(new PowersOf3ToN().powersOf3ToN(3), new int[]{1, 3});
-   // }
+   @Test
+   public void testCase1() {
+      assertArrayEquals(new PowersOf3ToN().powersOf3ToN(0), new int[0]);
+      assertArrayEquals(new PowersOf3ToN().powersOf3ToN(-42), new int[0]);
+      assertArrayEquals(new PowersOf3ToN().powersOf3ToN(0.99), new int[0]);
+      assertArrayEquals(new PowersOf3ToN().powersOf3ToN(1), new int[]{1});
+      assertArrayEquals(new PowersOf3ToN().powersOf3ToN(3), new int[]{1, 3});
+   }
 
    @Test
    public void testCase2() {
