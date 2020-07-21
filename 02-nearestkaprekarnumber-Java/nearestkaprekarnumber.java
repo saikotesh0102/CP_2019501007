@@ -8,10 +8,63 @@
 // # as that will not be efficient enough to get past the autograder. 
 // # Hint: one way to solve this is to start at n and grow in each direction until you find a Kaprekar number.
 
+public class nearestkaprekarnumber {
+	public long fun_nearestkaprekarnumber(long n){
+		long pdigit = n;
+		long ndigit = n;
+		while(true){
+			if(is_kaprekar(pdigit)){
+				break;
+			}
+			pdigit++;
+		}
 
+		long pCount = pdigit - n;
 
-class nearestkaprekarnumber {
-	public long fun_nearestkaprekarnumber(int n){
-		return 1;
+		while(true){
+			if(is_kaprekar(ndigit)){
+				break;
+			}
+			ndigit--;
+		}
+
+		long nCount = n - ndigit;
+
+		if(nCount <= pCount){
+			return ndigit;
+		}else{
+			return pdigit;
+		}
+	}
+
+	public boolean is_kaprekar(long n){
+		if(n == 1){
+			return true;
+		}
+
+		long sq_n = n * n;
+		int digitCount = 0;
+		while (sq_n != 0) { 
+            digitCount++; 
+            sq_n = sq_n / 10; 
+		}
+		sq_n = n * n;
+
+		for(int i = 0; i < digitCount; i++){
+			int eq_parts = (int) Math.pow(10, i);
+			if(eq_parts == n){
+				continue;
+			}
+
+			long sum = sq_n / eq_parts + sq_n % eq_parts; 
+            if(sum == n){
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public static void main(String[] args) {
+		
 	}
 }
