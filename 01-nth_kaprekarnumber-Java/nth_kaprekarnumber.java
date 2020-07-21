@@ -15,7 +15,6 @@ class nth_kaprekarnumber {
 		int start = 2;
 		while(true){
 			if(is_kaprekar(start)){
-				System.out.println(start);
 				count = count + 1;
 				if(count == n){
 					return start;
