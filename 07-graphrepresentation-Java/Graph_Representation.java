@@ -74,7 +74,6 @@ public class Graph_Representation{
         // Each section in the list will store a list of To Node
 		ArrayList<ArrayList<Integer>> r = new ArrayList<ArrayList<Integer>>();
 		return r;
-
 	}
 
 	public ArrayList<ArrayList<Integer>> get_adjacency_matrix(){
@@ -83,10 +82,7 @@ public class Graph_Representation{
         // column numbers represent to nodes.
         // Store the edge values in each spot,
         // and a 0 if no edge exists."""
-		
 		ArrayList<ArrayList<Integer>> r = new ArrayList<ArrayList<Integer>>();
 		return r;
-
-
 	}
 }
