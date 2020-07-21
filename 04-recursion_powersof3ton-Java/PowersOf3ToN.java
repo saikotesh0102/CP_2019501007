@@ -21,6 +21,6 @@ public class PowersOf3ToN {
 
 	public static void main(String[] args) {
 		PowersOf3ToN ob = new PowersOf3ToN();
-		System.out.println(Arrays.toString(ob.powersOf3ToN(3)));
+		System.out.println(Arrays.toString(ob.powersOf3ToN(100)));
 	}
 }
