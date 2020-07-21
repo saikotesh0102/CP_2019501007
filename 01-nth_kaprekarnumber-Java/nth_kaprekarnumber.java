@@ -6,10 +6,53 @@
 // # With this in mind, write the function nthKaprekarNumber(n) that takes a non-negative int n 
 // # and returns the nth Kaprekar number, where as usual we start counting at n==0.
 
-
-
 class nth_kaprekarnumber {
 	public long fun_nth_kaprekarnumber(int n){
-		return 1;
-	} 
+		if(n == 0){
+			return 1;
+		}
+		int count = 0;
+		int start = 2;
+		while(true){
+			if(is_kaprekar(start)){
+				System.out.println(start);
+				count = count + 1;
+				if(count == n){
+					return start;
+				}
+			}
+			start = start + 1;
+		}
+	}
+
+	public boolean is_kaprekar(int n){
+		if(n == 1){
+			return true;
+		}
+
+		int sq_n = n * n;
+		int digitCount = 0;
+		while (sq_n != 0) { 
+            digitCount++; 
+            sq_n = sq_n / 10; 
+		}
+		sq_n = n * n;
+
+		for(int i = 0; i < digitCount; i++){
+			int eq_parts = (int) Math.pow(10, i);
+			if(eq_parts == n){
+				continue;
+			}
+
+			int sum = sq_n / eq_parts + sq_n % eq_parts; 
+            if(sum == n){
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public static void main(String[] args) {
+		
+	}
 }
