@@ -7,7 +7,7 @@
 // # and returns the nth Kaprekar number, where as usual we start counting at n==0.
 
 class nth_kaprekarnumber {
-	public long fun_nth_kaprekarnumber(int n){
+	public long fun_nth_kaprekarnumber(long n){
 		if(n == 0){
 			return 1;
 		}
@@ -25,19 +25,18 @@ class nth_kaprekarnumber {
 		}
 	}
 
-	public boolean is_kaprekar(int n){
+	public boolean is_kaprekar(long n){
 		if(n == 1){
 			return true;
 		}
 
-		int sq_n = n * n;
+		long sq_n = n * n;
 		int digitCount = 0;
 		while (sq_n != 0) { 
             digitCount++; 
             sq_n = sq_n / 10; 
 		}
 		sq_n = n * n;
-		System.out.println(sq_n);
 
 		for(int i = 0; i < digitCount; i++){
 			int eq_parts = (int) Math.pow(10, i);
@@ -45,7 +44,7 @@ class nth_kaprekarnumber {
 				continue;
 			}
 
-			int sum = sq_n / eq_parts + sq_n % eq_parts; 
+			long sum = sq_n / eq_parts + sq_n % eq_parts; 
             if(sum == n){
 				return true;
 			}
