@@ -6,7 +6,7 @@
 // # With this in mind, write the function nthKaprekarNumber(n) that takes a non-negative int n 
 // # and returns the nth Kaprekar number, where as usual we start counting at n==0.
 
-class nth_kaprekarnumber {
+public class nth_kaprekarnumber {
 	public long fun_nth_kaprekarnumber(long n){
 		if(n == 0){
 			return 1;
@@ -52,7 +52,6 @@ class nth_kaprekarnumber {
 	}
 
 	public static void main(String[] args) {
-		nth_kaprekarnumber ob = new nth_kaprekarnumber();
-		System.out.println(ob.is_kaprekar(77778));
+		
 	}
 }
