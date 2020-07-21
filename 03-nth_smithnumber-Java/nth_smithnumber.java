@@ -7,10 +7,83 @@
 // # so fun_nthsmithnumber(0) should return 4
 // # so fun_nthsmithnumber(1) should return 22
 
-import java.lang.Math; 
-import java.util.Vector; 
+import java.util.*;
+ 
 public class nth_smithnumber {
 	public int fun_nth_smithnumber(int n) {
-		return 1;
-	} 
+		if(n == 0){
+			return 4;
+		}	
+		int start = 2;
+		int count = 0;
+		while(true){
+			if(isSmithNumber(start)){
+				count = count + 1;
+				if(count == n){
+					return start;
+				}
+			}
+			start = start + 1;
+		}
+	}
+
+	public boolean isSmithNumber(int n){
+		if(isPrime(n)){
+			return false;
+		}else{
+			ArrayList<Integer> res = primeFactors(n);
+			Iterator it = res.iterator();
+			int sum = 0;
+
+			while(it.hasNext()){
+				int number = (int)it.next();
+				while(number != 0){
+					sum = sum + (number % 10);
+					number = number / 10;
+				}
+			}
+
+			int temp = 0;
+			while(n != 0) {
+				temp = temp + (n % 10);
+				n = n / 10;
+			}
+			if(temp==sum) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+	}
+
+	public static ArrayList<Integer> primeFactors(int number) {
+		ArrayList<Integer> res = new ArrayList<Integer>();
+		for(int i = 2; i < number; i++) {
+			while(number % i == 0) {
+				res.add(i);
+				number = number / i;
+			}
+		}
+		if(number > 2) {
+		   res.add(number);
+		}
+		return res;
+	}
+
+	public boolean isPrime(int n) { 
+        if (n <= 1){
+			return false;
+		} 
+  
+        for (int i = 2; i < n; i++){ 
+            if (n % i == 0){
+				return false;
+			}
+		} 
+        return true; 
+    }
+
+	public static void main(String[] args) {
+		
+	}
 }
