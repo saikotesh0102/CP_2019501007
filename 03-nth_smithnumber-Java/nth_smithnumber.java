@@ -14,7 +14,7 @@ public class nth_smithnumber {
 		if(n == 0){
 			return 4;
 		}	
-		int start = 2;
+		int start = 5;
 		int count = 0;
 		while(true){
 			if(isSmithNumber(start)){
