@@ -17,7 +17,7 @@ def recursion(l, ar, i):
 	else:
 		num = l[i]
 		r = []
-		for i in range(num):
+		for i in range (len(num)):
 			rem = num % 10
 			num = num // 10
 			if rem % 2 == 0:
