@@ -9,4 +9,22 @@
 # Remember to not use strings. You may not use loops/iteration in this problem.
 
 def fun_recursion_onlyevendigits(l): 
-		return []
+	return recursion(l, [], 0)
+
+def recursion(l, ar, i):
+	if i == len(l):
+		return ar
+	else:
+		num = l[i]
+		r = []
+		for i in range(num):
+			rem = num % 10
+			num = num // 10
+			if rem % 2 == 0:
+				r.append(rem)
+		r = list(map(str, r[: : -1]))
+		s = ''.join(r)
+		if int(s) % 2 == 0:
+			ar.append(int(s))
+		i = i + 1
+		return recursion(l, ar, i)
