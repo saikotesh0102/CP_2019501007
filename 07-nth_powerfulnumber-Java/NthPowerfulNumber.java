@@ -14,7 +14,6 @@ public class NthPowerfulNumber {
 		int count = 0;
 		while(true){
 			if(isPowerfulNumber(start)){
-				System.out.println(start);
 				count = count + 1;
 				if(count == n){
 					return start;
@@ -37,7 +36,7 @@ public class NthPowerfulNumber {
 			}
 		}
 
-		for(int i = 3; i < Math.sqrt(n); i = i + 2){
+		for(int i = 3; i <= Math.sqrt(n); i = i + 2){
 			int power = 0;
 			while(n % i == 0){
 				n = n / i;
@@ -52,7 +51,6 @@ public class NthPowerfulNumber {
 	}
 	
 	public static void main(String[] args) {
-		NthPowerfulNumber ob = new NthPowerfulNumber();
-		System.out.println(ob.nthPowerfulNumber(10));
+		
 	}
 }
