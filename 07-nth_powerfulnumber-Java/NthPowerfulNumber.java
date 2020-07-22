@@ -14,6 +14,7 @@ public class NthPowerfulNumber {
 		int count = 0;
 		while(true){
 			if(isPowerfulNumber(start)){
+				System.out.println(start);
 				count = count + 1;
 				if(count == n){
 					return start;
@@ -52,6 +53,6 @@ public class NthPowerfulNumber {
 	
 	public static void main(String[] args) {
 		NthPowerfulNumber ob = new NthPowerfulNumber();
-		System.out.println(ob.nthPowerfulNumber(1));
+		System.out.println(ob.nthPowerfulNumber(10));
 	}
 }
