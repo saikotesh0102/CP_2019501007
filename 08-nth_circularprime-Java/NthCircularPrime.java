@@ -8,11 +8,11 @@
 public class NthCircularPrime {
 	public long nthCircularPrime(int n) {
 		// your code goes here
-		if(n == 0){
+		if(n == 1){
 			return 2;
 		}	
 		int start = 3;
-		int count = 0;
+		int count = 1;
 		while(true){
 			if(isCircularPrime(start) && isPrime(start)){
 				count = count + 1;
