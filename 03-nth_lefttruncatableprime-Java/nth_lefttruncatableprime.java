@@ -14,14 +14,38 @@ public class nth_lefttruncatableprime {
 		int count = 0;
 		int start = 3;
 		while(true){
-			// if(is_kaprekar(start)){
+			if(isLeftTruncatable(start)){
 				count = count + 1;
 				if(count == n){
 					return start;
 				}
-			// }
+			}
 			start = start + 2;
 		}
+	}
+
+	public boolean isLeftTruncatable(int n){
+		int temp = n;
+		int count = 0;
+		int temp1 = 0;
+
+		while(temp != 0){
+			count = count + 1;
+			temp1 = temp % 10;
+
+			if(temp1 == 0){
+				return false;
+			}
+			temp = temp / 10;
+		}
+
+		for(int i = count; i > 0; i--){
+			int mod = (int)Math.pow(10, i);
+			if(!isPrime(n % mod)){
+				return false;
+			}
+		}
+		return true;
 	}
 
 	public boolean isPrime(int n) { 
