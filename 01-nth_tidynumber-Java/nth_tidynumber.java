@@ -6,11 +6,39 @@
 // # fun_nth_tidynumber(15) = 17
 // # fun_nth_tidynumber(35) = 46
 
-
-
-
-class nth_tidynumber {
+public class nth_tidynumber {
 	public int fun_nth_tidynumber(int n){
-		return 0;
+		if(n == 0){
+			return 1;
+		}
+		int start = 2;
+		int count = 0;
+		while(true){
+			if(isTidy(start)){
+				count = count + 1;
+				if(count == n){
+					return start;
+				}
+			}
+			start = start + 1;
+		}
+	}
+
+	public boolean isTidy(int n){
+		int previous = 10;
+		
+		while(n != 0){
+			int rem = n % 10;
+			n = n / 10;
+			if(rem > previous){
+				return false;
+			}
+			previous = rem;
+		}
+		return true;
+	}
+
+	public static void main(String[] args) {
+		
 	}
 }
