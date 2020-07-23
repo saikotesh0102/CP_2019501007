@@ -6,6 +6,32 @@
 public class NthPronicNumber {
 	public long nthPronicNumber(int n) {
 		// Your code goes here
-		return 1;
+		if(n == 0){
+			return 0;
+		}
+		int start = 2;
+		int count = 0;
+		while(true){
+			if(isPronic(start)){
+				count = count + 1;
+				if(count == n){
+					return start;
+				}
+			}
+			start = start + 1;
+		}
+	}
+
+	public boolean isPronic(int n){
+		for(int i = 0; i <= (int)Math.sqrt(n); i++){
+			if(n == i * (i + 1)){
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public static void main(String[] args) {
+		
 	}
 }
