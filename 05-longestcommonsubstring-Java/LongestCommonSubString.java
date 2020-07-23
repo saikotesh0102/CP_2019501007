@@ -7,6 +7,8 @@
 // compare the strings). So, for example:
 // longestCommonSubstring("abcABC", "zzabZZAB") returns "AB" and not "ab"
 
+import java.util.*;
+
 public class LongestCommonSubString {
 	public String longestCommonSubstring(String s1, String s2) {
 		// Your code goes here
@@ -41,7 +43,10 @@ public class LongestCommonSubString {
 			row = row - 1;
 			col = col - 1;
 		}
-		return resultStr;
+		// return new String(Arrays.sort(resultStr.toCharArray()));
+		char[] temp = resultStr.toCharArray();
+		Arrays.sort(temp);
+		return new String(temp);
 	}
 
 	public static void main(String[] args) {
