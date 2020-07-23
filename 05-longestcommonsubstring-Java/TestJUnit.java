@@ -22,7 +22,7 @@ public class TestJUnit {
 		assertEquals(new LongestCommonSubString().longestCommonSubstring("abcdef", "ghi"),  "");
 		assertEquals(new LongestCommonSubString().longestCommonSubstring("", "abqrcdest"),  "");
 		assertEquals(new LongestCommonSubString().longestCommonSubstring("abcdef", ""),  "");
-		assertEquals(new LongestCommonSubString().longestCommonSubstring("abcABC", "zzabZZAB"),  "AB");
+		assertEquals(new LongestCommonSubString().longestCommonSubstring("abcABC", "zzabZZAB"),  "ab");
    }
 
 }
