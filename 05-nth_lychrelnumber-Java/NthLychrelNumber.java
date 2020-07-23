@@ -14,6 +14,7 @@ public class NthLychrelNumber {
 		int count = 1;
 		while(true){
 			if(isLychrel(start)){
+				System.out.println(start);
 				count = count + 1;
 				if(count == n){
 					return start;
@@ -25,7 +26,7 @@ public class NthLychrelNumber {
 
 	public boolean isLychrel(long number){
 		int MAX_ITERATIONS = 20;
-		
+
 		for (int i = 0; i < MAX_ITERATIONS; i++) { 
             number = number + reverse(number);
             if (isPalindrome(number)){ 
@@ -51,6 +52,7 @@ public class NthLychrelNumber {
     }
 
 	public static void main(String[] args) {
-		
+		NthLychrelNumber ob = new NthLychrelNumber();
+		System.out.println(ob.nthLychrelNumber(4));
 	}
 }
