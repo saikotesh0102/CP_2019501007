@@ -7,6 +7,50 @@
 public class NthLychrelNumber {
 	public long nthLychrelNumber(int n) {
 		// Your code goes here
-		return -1;
+		if(n == 1){
+			return 196;
+		}
+		long start = 197;
+		int count = 1;
+		while(true){
+			if(isLychrel(start)){
+				count = count + 1;
+				if(count == n){
+					return start;
+				}
+			}
+			start = start + 1;
+		}
+	}
+
+	public boolean isLychrel(long number){
+		int MAX_ITERATIONS = 20;
+		
+		for (int i = 0; i < MAX_ITERATIONS; i++) { 
+            number = number + reverse(number);
+            if (isPalindrome(number)){ 
+				return false;
+			}
+        } 
+        return true;
+	}
+
+	private boolean isPalindrome(long number) { 
+        return number == reverse(number); 
+	} 
+	
+	private static long reverse(long number) { 
+        long reverse = 0; 
+  
+        while (number > 0) { 
+            long remainder = number % 10; 
+            reverse = (reverse * 10) + remainder; 
+            number = number / 10; 
+        } 
+        return reverse; 
+    }
+
+	public static void main(String[] args) {
+		
 	}
 }
