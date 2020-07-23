@@ -17,7 +17,7 @@ public class TestJUnit {
    public void testCase1() {
 		assertEquals(new LongestCommonSubString().longestCommonSubstring("abcdef", "abqrcdest"), "cde");
 		assertEquals(new LongestCommonSubString().longestCommonSubstring("abcdef", "ghi"), "");
-		assertEquals(new LongestCommonSubString().longestCommonSubstring("abABC", "abcAB"), "AB");
+		assertEquals(new LongestCommonSubString().longestCommonSubstring("abABC", "abcAB"), "ab");
 		assertEquals(new LongestCommonSubString().longestCommonSubstring("abcdef", "abqrcdest"),  "cde");
 		assertEquals(new LongestCommonSubString().longestCommonSubstring("abcdef", "ghi"),  "");
 		assertEquals(new LongestCommonSubString().longestCommonSubstring("", "abqrcdest"),  "");
