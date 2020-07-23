@@ -9,7 +9,7 @@ public class NthAutomorphicNumbers {
 		if(n == 1){
 			return 0;
 		}
-		int start = 1;
+		long start = 1;
 		int count = 1;
 		while(true){
 			if(isAutomorphic(start)){
@@ -22,8 +22,8 @@ public class NthAutomorphicNumbers {
 		}
 	}
 
-	public boolean isAutomorphic(int n){
-		int sq = n * n;
+	public boolean isAutomorphic(long n){
+		long sq = n * n;
 		while(n > 0){
 			if(n % 10 != sq % 10){
 				return false;
