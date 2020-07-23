@@ -10,6 +10,41 @@
 public class LongestCommonSubString {
 	public String longestCommonSubstring(String s1, String s2) {
 		// Your code goes here
-		return "";
+		int[][] arr = new int[s1.length() + 1][s2.length() + 1];
+		int len = 0, row = 0, col = 0;
+
+		for(int i = 0; i <= s1.length(); i++){
+			for(int j = 0; j <= s2.length(); j++){
+				if(i == 0 || j == 0){
+					arr[i][j] = 0;
+				}else if(s1.charAt(i - 1) == s2.charAt(j - 1)){
+					arr[i][j] = arr[i - 1][j - 1] + 1;
+					if(len < arr[i][j]){
+						len = arr[i][j];
+						row = i;
+						col = j;
+					}
+				}else{
+					arr[i][j] = 0;
+				}
+			}
+		}
+
+		if(len == 0){
+			return "";
+		}
+
+		String resultStr = "";
+		while(arr[row][col] != 0){
+			resultStr = resultStr + s1.charAt(row - 1);
+			len = len - 1;
+			row = row - 1;
+			col = col - 1;
+		}
+		return resultStr;
+	}
+
+	public static void main(String[] args) {
+		
 	}
 }
