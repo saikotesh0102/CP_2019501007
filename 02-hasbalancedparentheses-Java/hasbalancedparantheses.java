@@ -10,72 +10,32 @@
 import java.util.*;
  
 public class hasbalancedparantheses {
-	StackNode head = null;
-	int size = 0;
-
+	
 	public boolean fun_hasbalancedparantheses(String str){
-		hasbalancedparantheses sol = new hasbalancedparantheses();
-		String[] temp = str.split("");
-		for (int i = 0; i < temp.length; i++) {
-			sol.push(temp[i]);
-		}
-
-		if (sol.size == 0) {
+		if(str.length() == 0){
 			return true;
-		} 
-		return false;
-	}
-
-	public void push(final String data) {
-		if (size == 0) {
-			StackNode firstNode = new StackNode(data);
-			head = firstNode;
-			size++;
-			return;
 		}
+		int lcount = 0;
+		int rcount = 0;
 
-		if (data.equals(")")) {
-			if(head.data.equals("(")) {
-				size--;
-				head = head.next;
-				return;
+		for(int i = 0; i < str.length(); i++){
+			if(str.charAt(i) == '('){
+				lcount = lcount + 1;
+			}else{
+				if(str.charAt(i) == ')'){
+					rcount = rcount + 1;
+				}
 			}
 		}
 
-		if (data.equals("]")) {
-			if(head.data.equals("[")) {
-				head = head.next;
-				size--;
-				return;
-			}
+		if(lcount == rcount){
+			return true;
+		}else{
+			return false;
 		}
-
-		if (data.equals("}")) {
-			if(head.data.equals("{")) {
-				head = head.next;
-				size--;
-				return;
-			}
-		}	
-		size++;
-        StackNode firstNode = new StackNode(data);
-        firstNode.next = head;
-        head = firstNode;
 	}
 
 	public static void main(String[] args) {
 		
 	}
-}
-
-class StackNode {
-
-    public String data;
-    StackNode next;
-
-    public StackNode(final String data) {
-        this.data = data;
-        this.next = null;
-    }
-}
-	
+}	
