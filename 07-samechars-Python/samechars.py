@@ -7,4 +7,6 @@
 
 def samechars(s1, s2):
 	# Your code goes here
-	pass
+	if isinstance(s1, int) or isinstance(s2, int):
+		return False
+	return set(list(s1)) == set(list(s2))
