@@ -6,8 +6,6 @@
 // # So, for example, "( ( ( ) ( ) ) ( ) )" is balanced, but "( ) )" is not balanced, and "( ) ) (" 
 // # is also not balanced. Hint: keep track of how many right parentheses remain unmatched as 
 // # you iterate over the string.
-
-import java.util.*;
  
 public class hasbalancedparantheses {
 	
