@@ -8,7 +8,6 @@
 # Note: your function may not just create a copy of L and call the destructive version of this function (below) on 
 # that copy and return it. Instead, you must directly construct the result here.
 
-
 def shortenlongruns(L, k):
 	# Your code goes here
 	result = []
